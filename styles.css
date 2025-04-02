@@ -332,12 +332,16 @@ article h3 {
 
 /* Estilos del aside, anuncios */
 aside {
+    /* Layout */
     width: 25%;
-    background-color: #bdb716;
-    background: linear-gradient(135deg, #43c6ac, #91f086);
     padding: 15px;
+    
+    /* Visual styling */
+    background: linear-gradient(135deg, #43c6ac, #91f086);
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(219, 69, 5, 0.3);
+    
+    /* Animation */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
