@@ -285,6 +285,12 @@ article h2 {
     margin-left: 15%;
     border: 5px solid #461066;
     /* Azul claro para un borde suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metroimg:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(70, 16, 102, 0.4);
 }
 
 
