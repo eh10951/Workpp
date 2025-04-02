@@ -173,12 +173,22 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.app-video {
-    max-width: 100%;
-    width: 800px;
-    border-radius: 10px;
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 800px;
     margin: 20px auto;
-    display: block;
+}
+
+.app-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
