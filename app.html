@@ -1,18 +1,132 @@
+
 <!DOCTYPE html>
-<html lang="en">
-
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seguridad Metro Cdmx</title>
+    <title>App de Auxilio Metro CDMX</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        
+        header {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .app-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 40px;
+            background: #1976d2;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff3d00;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 10px;
+        }
+    </style>
 </head>
-
-
 <body>
+    <header>
+        <h1>MetroSeguro CDMX</h1>
+        <p>Tu app de seguridad para el Sistema de Transporte Colectivo Metro</p>
+    </header>
 
-    <h1> "BLOG DE SEGURIDAD EN EL METRO DE LA CDMX" </h1>
+    <div class="container">
+        <section>
+            <h2>¿Qué es MetroSeguro?</h2>
+            <p>MetroSeguro es una aplicación móvil diseñada para brindar auxilio inmediato a usuarios del Metro CDMX que sean víctimas de cualquier tipo de delito durante su viaje.</p>
+        </section>
 
+        <section class="app-features">
+            <div class="feature-card">
+                <h3>Botón de Pánico</h3>
+                <p>Activa una alerta inmediata que notifica a las autoridades del metro y policía más cercana.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Ubicación en Tiempo Real</h3>
+                <p>Localización precisa dentro del sistema del metro para una respuesta más rápida.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Chat de Emergencia</h3>
+                <p>Comunicación directa con el centro de control para reportar incidentes.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Características Principales</h2>
+            <ul>
+                <li>Notificación instantánea a autoridades</li>
+                <li>Mapeo de zonas de riesgo</li>
+                <li>Reportes anónimos</li>
+                <li>Consejos de seguridad</li>
+                <li>Historial de incidentes</li>
+            </ul>
+        </section>
+
+        <section class="download-section">
+            <h2>Descarga MetroSeguro</h2>
+            <p>Disponible para iOS y Android</p>
+            <a href="#" class="button">Descargar para Android</a>
+            <a href="#" class="button">Descargar para iOS</a>
+        </section>
+
+        <section>
+            <h2>¿Cómo Funciona?</h2>
+            <ol>
+                <li>Descarga la aplicación</li>
+                <li>Regístrate con tu información básica</li>
+                <li>Activa los permisos de ubicación</li>
+                <li>¡Listo! Ya puedes usar MetroSeguro durante tus viajes</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Números de Emergencia</h2>
+            <p>Policía del Metro: 555-555-5555</p>
+            <p>Emergencias: 911</p>
+            <p>Protección Civil: 555-555-5556</p>
+        </section>
+    </div>
+
+    <footer style="background: #333; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>© 2024 MetroSeguro CDMX - Todos los derechos reservados</p>
+    </footer>
 </body>
-
 </html>
