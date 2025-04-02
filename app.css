@@ -163,6 +163,25 @@ footer {
     margin-top: 40px;
 }
 
+/* Video section */
+.video-section {
+    margin: 40px 0;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-video {
+    max-width: 100%;
+    width: 800px;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
     .app-features {
