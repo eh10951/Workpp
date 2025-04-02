@@ -422,6 +422,55 @@ aside ul li {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.social-media {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.social-media h3 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateX(5px);
+}
+
+.social-icon i {
+    margin-right: 10px;
+}
+
+.facebook {
+    background: #1877f2;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.whatsapp {
+    background: #25d366;
+}
+
 /* Estilos del pie de página */
 footer {
     background-color: #3d6fb4;
