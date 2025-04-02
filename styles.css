@@ -67,13 +67,20 @@ header h1 {
 /* Estilos del párrafo en el encabezado */
 header p {
     font-size: 1.8em;
-    font-family: 'Segoe UI', sans-serif;
-    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    color: #2c3e50;
     margin-top: 15px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
     position: relative;
     z-index: 2;
-    opacity: 0.9;
+    opacity: 0.95;
+    background: linear-gradient(120deg, #2c3e50, #34495e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px 20px;
+    border-radius: 8px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
 }
 
 /* Estilos de la imagen en el encabezado */
@@ -88,7 +95,18 @@ header img {
 .txlogo {
     width: 50%;
     margin: 0 auto;
-    padding: 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.3s ease;
+}
+
+.txlogo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(31, 38, 135, 0.2);
 }
 
 .unrc {
