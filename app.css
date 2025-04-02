@@ -112,7 +112,7 @@ header h1 {
     margin: 50px 0;
     padding: 50px;
     background: linear-gradient(135deg, #1976d2, #1565c0);
-    color: white;
+    color: white, #e84f4f;;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -121,7 +121,7 @@ header h1 {
 .button {
     display: inline-block;
     padding: 15px 30px;
-    background: linear-gradient(135deg, #ff3d00, #dd2c00);
+    background: linear-gradient(135deg, #ff6333, #dd2c00);
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -129,6 +129,8 @@ header h1 {
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* :hover crea un efecto de animación cuando el usuario pasa el cursor sobre un botón (elemento con clase .button). Específicamente:  */
 
 .button:hover {
     transform: scale(1.05);
@@ -163,8 +165,8 @@ footer {
     margin-top: 40px;
 }
 
-/* Video section */
-.video-section, .gift {
+/* gift seccion */
+.gift {
     margin: 40px auto;
     text-align: center;
     padding: 20px;
@@ -182,24 +184,7 @@ footer {
     border-radius: 10px;
 }
 
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* Aspecto 16:9 */
-    height: 0;
-    overflow: hidden;
-    max-width: 800px;
-    margin: 20px auto;
-}
 
-.app-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 /* Responsivo */
 @media (max-width: 768px) {
