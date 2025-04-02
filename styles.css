@@ -342,6 +342,25 @@ aside ul li {
     box-shadow: 0px 0px 15px rgba(219, 69, 5, 0.3);
 }
 
+.appm {
+    width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 15px rgba(219, 69, 5, 0.3);
+}
+
+.leer-mas {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #10717a;
+    background: linear-gradient(135deg, #514edf, #e1c53d);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
 /* Estilos del pie de página */
 footer {
     background-color: #3d6fb4;
