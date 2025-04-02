@@ -3,14 +3,14 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #d1c2c2;
+    background-color: #f2eeee;
     line-height: 1.6;
 }
 
 /* Encabezado */
 header {
     background: linear-gradient(135deg, #d32f2f, #b71c1c);
-    color: #e2d32c;
+    color: #fff58a;
     text-align: center;
     padding: 3rem 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
