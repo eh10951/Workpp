@@ -164,13 +164,22 @@ footer {
 }
 
 /* Video section */
-.video-section {
-    margin: 40px 0;
+.video-section, .gift {
+    margin: 40px auto;
     text-align: center;
     padding: 20px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.gift img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .video-container {
