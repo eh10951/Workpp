@@ -3,14 +3,14 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
+    background-color: #d1c2c2;
     line-height: 1.6;
 }
 
 /* Encabezado */
 header {
     background: linear-gradient(135deg, #d32f2f, #b71c1c);
-    color: white;
+    color: #e2d32c;
     text-align: center;
     padding: 3rem 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -32,10 +32,13 @@ header h1 {
 /* imagen app  */
 
 .apppng {
-    display: block;
+    
+    display: block; /* display: block; para que la imagen ocupe todo el ancho disponible */
+    
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
+    border-radius: 40px;
 }
 
 /* Tarjetas de características */
