@@ -279,13 +279,14 @@ article h2 {
     /* Rojo */
 }
 
-article img {
+.metroimg {
     width: 70%;
     border-radius: 17px;
     margin-left: 15%;
     border: 5px solid #461066;
     /* Azul claro para un borde suave */
 }
+
 
 article ul {
     margin: 15px 0;
