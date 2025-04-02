@@ -5,74 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App de Auxilio Metro CDMX</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f2f5;
-        }
-        
-        header {
-            background-color: #d32f2f;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .app-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .download-section {
-            text-align: center;
-            margin: 40px 0;
-            padding: 40px;
-            background: #1976d2;
-            color: white;
-            border-radius: 10px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #ff3d00;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            margin: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="app.css">
+ 
 </head>
+    
 <body>
+    
     <header>
         <h1>MetroSeguro CDMX</h1>
         <p>Tu app de seguridad para el Sistema de Transporte Colectivo Metro</p>
     </header>
 
     <div class="container">
-        <section>
+        
+        <section> <!--section se utiliza para agrupar contenido relacionado-->
             <h2>¿Qué es MetroSeguro?</h2>
+            
             <p>MetroSeguro es una aplicación móvil diseñada para brindar auxilio inmediato a usuarios del Metro CDMX que sean víctimas de cualquier tipo de delito durante su viaje.</p>
+
+
+            <img src="app.png" alt="App" , class="apppng">
+            
         </section>
 
         <section class="app-features">
+            
             <div class="feature-card">
                 <h3>Botón de Pánico</h3>
                 <p>Activa una alerta inmediata que notifica a las autoridades del metro y policía más cercana.</p>
@@ -87,6 +45,7 @@
                 <h3>Chat de Emergencia</h3>
                 <p>Comunicación directa con el centro de control para reportar incidentes.</p>
             </div>
+            
         </section>
 
         <section>
