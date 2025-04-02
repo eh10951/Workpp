@@ -32,10 +32,10 @@ header h1 {
 /* imagen app  */
 
 .apppng {
-
-    position: relative;
-    right: -150px;
-
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Tarjetas de características */
