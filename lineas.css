@@ -73,6 +73,11 @@ header h1 {
 .line-card[data-line="5"] { background: linear-gradient(145deg, #ffffff, #ffd600); border-left: 5px solid #ffc107; animation-delay: 0.5s; } /* Amarillo */
 .line-card[data-line="6"] { background: linear-gradient(145deg, #ffffff, #f44336); border-left: 5px solid #d32f2f; animation-delay: 0.6s; } /* Rojo */
 .line-card[data-line="7"] { background: linear-gradient(145deg, #ffffff, #ff9800); border-left: 5px solid #e65100; animation-delay: 0.7s; } /* Naranja */
+.line-card[data-line="8"] { background: linear-gradient(145deg, #ffffff, #4caf50); border-left: 5px solid #2e7d32; animation-delay: 0.8s; } /* Verde */
+.line-card[data-line="9"] { background: linear-gradient(145deg, #ffffff, #795548); border-left: 5px solid #4e342e; animation-delay: 0.9s; } /* Café */
+.line-card[data-line="A"] { background: linear-gradient(145deg, #ffffff, #9c27b0); border-left: 5px solid #6a1b9a; animation-delay: 1s; } /* Morado */
+.line-card[data-line="B"] { background: linear-gradient(145deg, #ffffff, #607d8b); border-left: 5px solid #37474f; animation-delay: 1.1s; } /* Verde y Gris */
+.line-card[data-line="12"] { background: linear-gradient(145deg, #ffffff, #ffd700); border-left: 5px solid #daa520; animation-delay: 1.2s; } /* Dorado */
 
 .line-card h2 {
     color: #1a237e;
