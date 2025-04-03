@@ -163,58 +163,27 @@ header img:nth-child(2) {
     backdrop-filter: blur(5px);
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: pulse 2s infinite, glow 3s infinite alternate;
+    transition: all 0.4s ease;
+    animation: softGlow 4s infinite alternate;
     position: relative;
     overflow: hidden;
 }
 
-.txlogo::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        45deg,
-        transparent,
-        rgba(255, 255, 255, 0.1),
-        transparent
-    );
-    transform: rotate(45deg);
-    animation: shine 3s infinite;
-}
-
 .txlogo:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 15px 45px rgba(31, 38, 135, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(31, 38, 135, 0.2);
+    border-color: rgba(52, 152, 219, 0.4);
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-    100% { transform: scale(1); }
-}
-
-@keyframes glow {
-    from {
-        box-shadow: 0 0 5px #fff,
-                    0 0 10px #fff,
-                    0 0 15px #3498db,
-                    0 0 20px #3498db;
+@keyframes softGlow {
+    0% {
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+        border-color: rgba(255, 255, 255, 0.18);
     }
-    to {
-        box-shadow: 0 0 10px #fff,
-                    0 0 20px #fff,
-                    0 0 30px #3498db,
-                    0 0 40px #3498db;
+    100% {
+        box-shadow: 0 8px 32px rgba(52, 152, 219, 0.25);
+        border-color: rgba(52, 152, 219, 0.3);
     }
-}
-
-@keyframes shine {
-    0% { transform: translateX(-200%) rotate(45deg); }
-    100% { transform: translateX(200%) rotate(45deg); }
 }
 
 .unrc {
