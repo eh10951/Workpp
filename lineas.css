@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, #1a237e, #283593);
+    background: linear-gradient(to right, #1a237e, #0d47a1);
     color: white;
     text-align: center;
     padding: 2.5rem;
@@ -54,13 +54,13 @@ header h1 {
     background: linear-gradient(145deg, #ffffff, #fafafa);
 }
 
-.line-card[data-line="1"] { background: linear-gradient(145deg, #ffffff, #ffc2d1); border-left: 5px solid #ff69b4; animation-delay: 0.1s; } /* Rosa */
-.line-card[data-line="2"] { background: linear-gradient(145deg, #ffffff, #c2e3ff); border-left: 5px solid #0000ff; animation-delay: 0.2s; } /* Azul */
-.line-card[data-line="3"] { background: linear-gradient(145deg, #ffffff, #c2ffc7); border-left: 5px solid #556b2f; animation-delay: 0.3s; } /* Verde Olivo */
-.line-card[data-line="4"] { background: linear-gradient(145deg, #ffffff, #c2fff9); border-left: 5px solid #00ffff; animation-delay: 0.4s; } /* Cian */
-.line-card[data-line="5"] { background: linear-gradient(145deg, #ffffff, #fff9c2); border-left: 5px solid #ffff00; animation-delay: 0.5s; } /* Amarillo */
-.line-card[data-line="6"] { background: linear-gradient(145deg, #ffffff, #ffc2c2); border-left: 5px solid #ff0000; animation-delay: 0.6s; } /* Rojo */
-.line-card[data-line="7"] { background: linear-gradient(145deg, #ffffff, #ffdcc2); border-left: 5px solid #ff8c00; animation-delay: 0.7s; } /* Naranja */
+.line-card[data-line="1"] { background: linear-gradient(145deg, #ffffff, #ff80ab); border-left: 5px solid #ff1493; animation-delay: 0.1s; } /* Rosa */
+.line-card[data-line="2"] { background: linear-gradient(145deg, #ffffff, #1e88e5); border-left: 5px solid #0d47a1; animation-delay: 0.2s; } /* Azul */
+.line-card[data-line="3"] { background: linear-gradient(145deg, #ffffff, #558b2f); border-left: 5px solid #33691e; animation-delay: 0.3s; } /* Verde Olivo */
+.line-card[data-line="4"] { background: linear-gradient(145deg, #ffffff, #00bcd4); border-left: 5px solid #006064; animation-delay: 0.4s; } /* Cian */
+.line-card[data-line="5"] { background: linear-gradient(145deg, #ffffff, #ffd600); border-left: 5px solid #ffc107; animation-delay: 0.5s; } /* Amarillo */
+.line-card[data-line="6"] { background: linear-gradient(145deg, #ffffff, #f44336); border-left: 5px solid #d32f2f; animation-delay: 0.6s; } /* Rojo */
+.line-card[data-line="7"] { background: linear-gradient(145deg, #ffffff, #ff9800); border-left: 5px solid #e65100; animation-delay: 0.7s; } /* Naranja */
 
 .line-card h2 {
     color: #1a237e;
