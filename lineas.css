@@ -1,0 +1,133 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    animation: headerFade 1s ease-out;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5rem;
+}
+
+.lines-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.line-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    animation: cardAppear 0.5s ease-out forwards;
+}
+
+.line-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.line-card[data-line="1"] { animation-delay: 0.1s; }
+.line-card[data-line="2"] { animation-delay: 0.2s; }
+.line-card[data-line="3"] { animation-delay: 0.3s; }
+.line-card[data-line="4"] { animation-delay: 0.4s; }
+.line-card[data-line="5"] { animation-delay: 0.5s; }
+.line-card[data-line="6"] { animation-delay: 0.6s; }
+.line-card[data-line="7"] { animation-delay: 0.7s; }
+
+.line-card h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.line-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #3498db;
+    transition: width 0.3s ease;
+}
+
+.line-card:hover h2::after {
+    width: 100px;
+}
+
+.line-info {
+    color: #555;
+    line-height: 1.6;
+}
+
+.line-info p {
+    margin: 0.5rem 0;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes headerFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .lines-container {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+}
