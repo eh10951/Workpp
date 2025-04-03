@@ -30,6 +30,17 @@ main {
     padding: 0 1rem;
 }
 
+.metro-map {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+.metro-map:hover {
+    transform: scale(1.05); /* Scale up the image on hover */
+}
+
 .map-container {
     background: white;
     border-radius: 10px;
