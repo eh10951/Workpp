@@ -1,43 +1,72 @@
+/* Estilo global */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.75;
 }
 
+/* Encabezado */
 header {
-    background-color: #105319;
-    color: #f7e815;
-    padding: 1rem 0;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: #fff;
+    padding: 2.5rem 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
+/* Contenido principal */
 main {
-    padding: 2rem;
+    padding: 3rem 5%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 section {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
+section:hover {
+    transform: translateY(-5px);
+}
+
+/* Titulos */
 h2 {
-    color: #333;
+    color: #2E7D32;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
+/* Párrafos */
 p {
-    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #555;
 }
 
+/* Footer */
 footer {
-    background-color: #ca0f0f;
+    background: linear-gradient(135deg, #2196F3, #1565C0);
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
+    font-size: 1rem;
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }

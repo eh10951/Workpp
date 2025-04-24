@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #00796b;
+    background-color: #eb6c05;
     color: #fff;
     padding: 1.5rem 0;
     text-align: center;
@@ -31,23 +31,40 @@ section {
 }
 
 h2 {
-    color: #00796b;
+    color: #ff8f1c;
     font-size: 1.8em;
     margin-bottom: 0.5rem;
 }
 
 p {
     line-height: 1.6;
-    color: #333;
+    color: #000000;
 }
 
 footer {
-    background-color: #00796b;
-    color: #fff;
+    background-color: #63440d;
+    color: #ecfe94;
     text-align: center;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     bottom: 0;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 6px rgb(225, 225, 225, 0.1);
+}
+
+
+img {
+    width:50%;
+    height:50%;
+    position: relative;
+    left: 150px;
+
+}
+.bandera {
+
+    width: 60px;
+    height: 60 px;
+    position: relative;
+    left: 220px;
+    top: -55px;
 }

@@ -1,0 +1,53 @@
+/* Reset y fuente */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #c0c0c0;
+  color: #000000;
+}
+/* Encabezado */
+.titulo-Fuentes {
+  background-color: #008080;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+/* Contenedor del blog */
+.fuentes-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Cuadro blanco con contenido */
+.fuentes {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 800px;
+  width: 100%;
+}
+/* Contenedor del blog */
+.blog-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Cuadro blanco con contenido */
+.articulo {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Títulos internos */
+.articulo h2,
+.articulo h3 {
+  color: #1e2a38;
+}

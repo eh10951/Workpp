@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Ruta del Metro CDMX</title>
+  <link rel="stylesheet" href="MapaI.css">
+</head>
+
+<script src="MapaI.js"></script>
+<script>
+    // Código que llena las estaciones...
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<body>
+  <div class="contenedor">
+    <h1>Calculadora de Ruta del Metro CDMX</h1>
+
+    <label for="estacion-inicio">Estación de inicio:</label>
+    <select id="estacion-inicio"></select>
+
+    <label for="estacion-fin">Estación final:</label>
+    <select id="estacion-fin"></select>
+
+    <button onclick="calcularRuta()">Calcular Ruta</button>
+    <button onclick="descargarPDF()">Descargar PDF</button>
+
+    <pre id="resultado"></pre>
+  </div>
+
+  <script src="MapaI.js"></script>
+  <script>
+    // Llenar selects automáticamente desde el objeto "metro"
+    const selectInicio = document.getElementById('estacion-inicio');
+    const selectFin = document.getElementById('estacion-fin');
+
+    const estacionesUnicas = [...new Set(Object.values(metro).flat())].sort();
+    estacionesUnicas.forEach(estacion => {
+      const option1 = document.createElement('option');
+      option1.value = estacion;
+      option1.textContent = estacion;
+      selectInicio.appendChild(option1);
+
+      const option2 = document.createElement('option');
+      option2.value = estacion;
+      option2.textContent = estacion;
+      selectFin.appendChild(option2);
+    });
+
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -312,24 +312,16 @@ header img:nth-child(2) {
 .fade-out {
     opacity: 0;
     transition: opacity 0.5s ease-out;
+
 }
 
 .notas {
     display: flex;
-    justify-content: center;
-    /* Centra horizontalmente */
-    align-items: center;
-    /* Centra verticalmente */
+    justify-content: space-around;
     flex-wrap: wrap;
-    /* Permite que las noticias se ajusten en varias filas */
-    margin: 40px auto;
-    /* Centra el contenedor en la página */
-    width: 100%;
-    /* Asegura que ocupe todo el ancho disponible */
-    max-width: 1200px;
-    /* Limita el ancho máximo */
-    text-align: center;
-    /* Opcional, para centrar texto */
+    margin: 40px 0;
+
+
 }
 
 .notas h1 {
@@ -340,38 +332,29 @@ header img:nth-child(2) {
     margin-bottom: 20px;
 }
 
-.notas p {
-    font-size: 1.7em;
-    color: #555;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 20px;
+.noticia img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 .noticia {
     background: linear-gradient(145deg, #ffffff, #f8f9fa);
     border: none;
     border-radius: 25px;
-    box-shadow: 0 15px 35px rgba(52, 152, 219, 0.1), inset 0 -2px 0 rgba(46, 204, 113, 0.1);
-    width: 280px;
-    margin: 20px;
-    padding: 28px;
+    box-shadow:
+        0 15px 35px rgba(52, 152, 219, 0.1),
+        inset 0 -2px 0 rgba(46, 204, 113, 0.1);
+    width: 48%; /* Ajusta el ancho para que quepan dos noticias */
+    margin: 20px auto; /* Centra las noticias horizontalmente */
+    padding: 35px;
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
     border-left: 4px solid #2193b0;
-}
-
-.noticias {
-    display: flex;
-    justify-content: ;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 20px auto;
-    width: 100%;
-    max-width: 1200px;
 }
 
 .noticia:hover {
@@ -381,6 +364,8 @@ header img:nth-child(2) {
         inset 0 -2px 0 rgba(33, 147, 176, 0.1);
     background: linear-gradient(145deg, #ffffff, #f5f5f5);
 }
+
+
 
 .noticia h2 {
     font-size: 1.8em;
@@ -393,13 +378,6 @@ header img:nth-child(2) {
     margin-bottom: 15px;
 }
 
-.noticia img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
 .noticia .not123 {
     display: inline-block;
     padding: 10px 15px;
@@ -410,9 +388,14 @@ header img:nth-child(2) {
     transition: background-color 0.3s;
 }
 
+
 .noticia .not123:hover {
     color: #55541e;
+    /* Color del texto al pasar el ratón */
     background-color: #bfc217;
+    /* Color de fondo al pasar el ratón */
+    border-radius: 5px;
+    /* Bordes redondeados */
 }
 
 .noticia .leer-mas {
@@ -428,7 +411,6 @@ header img:nth-child(2) {
 .noticia .leer-mas:hover {
     background-color: #ff6347;
 }
-
 
 /* Estilos del contenido */
 .contenido {
@@ -544,13 +526,11 @@ article ul li:hover {
     border-left-color: #e67e22;
 }
 
+/* Estilos del aside, anuncios */
 aside {
     /* Layout */
-    width: 35%;
-    /* Aumenté el ancho */
+    width: 25%;
     padding: 30px;
-    margin: 20px auto;
-    /* Añadí un margen para centrarlo */
 
     /* Visual styling */
     background: linear-gradient(145deg, #3498db, #2ecc71);
@@ -570,26 +550,23 @@ aside {
 }
 
 aside p {
-    margin: 20px 0;
-    /* Aumenté el margen para separación */
-    font-size: 1.2em;
-    /* Aumenté el tamaño del texto */
+    margin: 15px 0;
+    font-size: 1.1em;
     color: #f0f8ff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 aside ul {
     padding-left: 20px;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 aside ul li {
-    margin: 15px 0;
-    line-height: 1.6;
+    margin: 12px 0;
+    line-height: 1.5;
     color: #f0f8ff;
-    font-size: 1.1em;
-    padding: 12px;
-    /* Ajusté el padding */
+    font-size: 1.05em;
+    padding: 8px;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
@@ -602,13 +579,12 @@ aside:hover {
 
 aside h3 {
     color: #ffffff;
-    font-size: 2.2em;
-    /* Aumenté el tamaño */
+    font-size: 1.9em;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
     border-bottom: 3px solid rgba(255, 255, 255, 0.8);
-    padding-bottom: 12px;
+    padding-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     font-weight: 600;
 }
@@ -619,10 +595,10 @@ aside ul {
 }
 
 aside ul li {
-    margin: 20px 0;
-    padding: 15px;
+    margin: 15px 0;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
+    border-radius: 8px;
     transition: all 0.3s ease;
 }
 
@@ -637,19 +613,32 @@ aside ul li strong {
 }
 
 /* Estilos de la tarjeta */
-.tarjeta,
-.appm,
-.imgapp {
-    width: 90%;
+.tarjeta {
+    width: 80%;
     padding: 15px;
     border-radius: 10px;
-    margin-bottom: 25px;
-    /* Añadí más espacio entre las tarjetas */
-    box-shadow: 0px 0px 20px rgba(219, 69, 5, 0.3);
-    /* Mejoré la sombra */
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 15px rgba(219, 69, 5, 0.3);
 }
 
-/* Estilo del enlace "leer más" */
+.appm {
+    width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 15px rgba(219, 69, 5, 0.3);
+}
+
+.imgapp {
+
+
+    width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 15px rgba(219, 69, 5, 0.3);
+}
+
 .leer-mas {
     display: inline-block;
     padding: 10px 15px;
@@ -662,35 +651,32 @@ aside ul li strong {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Sección de redes sociales */
 .social-media {
-    margin-top: 40px;
-    /* Aumenté el margen superior */
-    padding: 25px;
+    margin-top: 30px;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
 .social-media h3 {
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: center;
 }
 
 .social-icons {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    /* Añadí más espacio entre los íconos */
+    gap: 15px;
 }
 
 .social-icon {
     display: flex;
     align-items: center;
-    padding: 12px 18px;
+    padding: 10px 15px;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
@@ -699,8 +685,7 @@ aside ul li strong {
 }
 
 .social-icon i {
-    margin-right: 12px;
-    /* Aumenté el espacio entre el icono y el texto */
+    margin-right: 10px;
 }
 
 .facebook {
@@ -715,15 +700,12 @@ aside ul li strong {
     background: #25d366;
 }
 
-
+/* Estilos del pie de página */
 footer {
     background: linear-gradient(135deg, #2193b0, #6dd5ed);
     text-align: center;
     padding: 25px;
-    margin: 0;
-    /* Elimina el margen superior */
-    width: 100%;
-    /* Asegura que el footer ocupe todo el ancho */
+    margin-top: 40px;
     position: relative;
     overflow: hidden;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
@@ -771,7 +753,6 @@ footer p:hover {
         box-shadow: 0 -10px 30px rgba(109, 213, 237, 0.4);
     }
 }
-
 
 @keyframes shine {
     0% {
