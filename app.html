@@ -4,97 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App de Auxilio Metro CDMX</title>
+    <title>MetroSeguro CDMX - Seguridad en el Metro</title>
 
+    <!-- Fuente profesional -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="css/app.css">
-
 </head>
 
 <body>
 
-    <header>
-        <h1>MetroSeguro CDMX</h1>
-        <p>Tu app de seguridad para el Sistema de Transporte Colectivo Metro</p>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>MetroSeguro CDMX</h1>
+            <p>Tu app de seguridad inteligente para el Metro de la CDMX</p>
+            <a href="#download" class="btn-primary">Descargar Ahora</a>
+            <img src="imagenes/qr.png" alt="Metroqr" class="qr">
+        </div>
     </header>
 
-    <div class="container">
-
-        <section> <!--section se utiliza para agrupar contenido relacionado-->
+    <section class="intro">
+        <div class="container">
             <h2>¿Qué es MetroSeguro?</h2>
+            <p>Una aplicación que te protege durante tus viajes en el Sistema de Transporte Colectivo Metro de la Ciudad
+                de México, brindándote auxilio inmediato en caso de emergencia.</p>
+            <img src="imagenes/inicioap.jpg" alt="MetroSeguro App" class="intro-img">
+        </div>
+    </section>
 
-            <p>MetroSeguro es una aplicación móvil diseñada para brindar auxilio inmediato a usuarios del Metro CDMX que
-                sean víctimas de cualquier tipo de delito durante su viaje.</p>
-
-
-            <img src="imagenes/inicioap.jpg" alt="App" , class="apppng">
-
-        </section>
-
-        <section class="app-features">
-
-            <div class="feature-card">
-                <h3>Botón de Pánico</h3>
-                <p>Activa una alerta inmediata que notifica a las autoridades del metro y policía más cercana.</p>
+    <section class="features">
+        <div class="container">
+            <h2>Funciones Destacadas</h2>
+            <div class="features-grid">
+                <div class="card">
+                    <h3>🚨 Botón de Pánico</h3>
+                    <p>Alerta inmediata para autoridades del Metro y policía cercana.</p>
+                </div>
+                <div class="card">
+                    <h3>📍 Ubicación Precisa</h3>
+                    <p>Localiza tu posición en tiempo real dentro del Metro.</p>
+                </div>
+                <div class="card">
+                    <h3>💬 Chat de Emergencia</h3>
+                    <p>Comunícate en tiempo real con el centro de control de seguridad.</p>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="feature-card">
-                <h3>Ubicación en Tiempo Real</h3>
-                <p>Localización precisa dentro del sistema del metro para una respuesta más rápida.</p>
-            </div>
+    <section class="demo">
+        <div class="container">
+            <h2>Así Funciona</h2>
 
-            <div class="feature-card">
-                <h3>Chat de Emergencia</h3>
-                <p>Comunicación directa con el centro de control para reportar incidentes.</p>
-            </div>
+        </div>
+    </section>
 
-        </section>
-
-        <section class="gift">
-            <h2>¡Como funciona nuestra app, checalo aqui!:</h2>
-            <img src="app.gif" alt="GIF animado" />
-        </section>
-
-        <section>
+    <section class="main-features">
+        <div class="container">
             <h2>Características Principales</h2>
             <ul>
-                <li>Notificación instantánea a autoridades</li>
-                <li>Mapeo de zonas de riesgo</li>
-                <li>Reportes anónimos</li>
-                <li>Consejos de seguridad</li>
-                <li>Historial de incidentes</li>
+                <li>🔔 Notificaciones instantáneas</li>
+                <li>🗺️ Mapeo de zonas de riesgo</li>
+                <li>🕵️ Reportes anónimos</li>
+                <li>🛡️ Consejos de seguridad</li>
+                <li>📝 Historial de incidentes</li>
             </ul>
-        </section>
+        </div>
+    </section>
 
-        <section class="download-section">
-            <h2>Descarga MetroSeguro</h2>
+    <section id="download" class="download">
+        <div class="container">
+            <h2>Descarga la App</h2>
             <p>Disponible para iOS y Android</p>
-            <a href="#" class="button">Descargar para Android</a>
-            <a href="#" class="button">Descargar para iOS</a>
-        </section>
+            <div class="download-buttons">
+                <a href="#" class="btn-secondary">Android</a>
+                <a href="#" class="btn-secondary">iOS</a>
+            </div>
+        </div>
+    </section>
 
-        <section>
-            <h2>¿Cómo Funciona?</h2>
-            <ol>
-                <li>Descarga la aplicación</li>
-                <li>Regístrate con tu información básica</li>
-                <li>Activa los permisos de ubicación</li>
-                <li>¡Listo! Ya puedes usar MetroSeguro durante tus viajes</li>
-            </ol>
-        </section>
-
-
-
-        <section>
+    <section class="emergency">
+        <div class="container">
             <h2>Números de Emergencia</h2>
-            <p>Policía del Metro: 555-555-5555</p>
-            <p>Emergencias: 911</p>
-            <p>Protección Civil: 555-555-5556</p>
-        </section>
-    </div>
+            <div class="emergency-cards">
+                <div class="emergency-card">🚔 Policía del Metro: 555-555-5555</div>
+                <div class="emergency-card">🚑 Emergencias: 911</div>
+                <div class="emergency-card">🏢 Protección Civil: 555-555-5556</div>
+            </div>
+        </div>
+    </section>
 
-    <footer style="background: #333; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+    <footer>
         <p>© 2024 MetroSeguro CDMX - Todos los derechos reservados</p>
     </footer>
+
 </body>
 
 </html>

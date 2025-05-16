@@ -340,6 +340,14 @@ header img:nth-child(2) {
     margin-bottom: 20px;
 }
 
+.notpin {
+    font-size: 5em;
+    color: brown;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px
+}
+
 .notas p {
     font-size: 1.7em;
     color: #555;
