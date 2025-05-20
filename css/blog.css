@@ -1,162 +1,201 @@
-A
-
-/* Reset y fuente */
-body {
+/* -------------------- RESET MODERNO -------------------- */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #c0c0c0;
-  color: #000000;
 }
 
-/* Encabezado */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(145deg, #f0f4f8, #e2ecf3);
+  color: #2c3e50;
+  line-height: 1.7;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* -------------------- ENCABEZADO -------------------- */
 .titulo-blog {
-  background-color: #008080;
-  color: white;
-  padding: 20px;
+  background: linear-gradient(120deg, #007BFF, #00C9A7);
+  color: #fff;
   text-align: center;
+  padding: 50px 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Contenedor del blog */
+.titulo-blog::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  top: -100px;
+  right: -100px;
+  transform: rotate(25deg);
+}
+
+.titulo-blog h1 {
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* -------------------- CONTENEDOR PRINCIPAL -------------------- */
 .blog-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Centra verticalmente */
   flex-direction: column;
-  /* Alinea los elementos en columna */
-  padding: 40px 20px;
+  align-items: center;
+  padding: 50px 20px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* Cuadro blanco con contenido */
+/* -------------------- ARTÍCULOS -------------------- */
 .articulo {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  max-width: 800px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+  padding: 35px;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid #e3e8f0;
 }
 
-/* Títulos internos */
-.articulo h2,
+.articulo::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.03), transparent);
+  z-index: 0;
+}
+
+.articulo:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+.articulo h2 {
+  color: #0c3c78;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00C9A7;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
 .articulo h3 {
-  color: #1e2a38;
+  color: #1a5276;
+  font-size: 1.2em;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
 }
 
-/* Imagen con estilo */
-.imagen-colapso {
+.articulo p {
+  color: #495057;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+/* -------------------- IMÁGENES CON EFECTO -------------------- */
+.imagen-colapso,
+.inametr,
+.pelmetro,
+.sobmetro,
+.econmetro,
+.igumetro,
+.PINCHM,
+.PANT,
+.EUNIV,
+.C1917 {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  display: block;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, filter 0.3s ease;
+  filter: brightness(0.97);
 }
 
-/* Imagen con estilo 2 */
-.inametr {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
-
+.imagen-colapso:hover,
+.inametr:hover,
+.pelmetro:hover,
+.sobmetro:hover,
+.econmetro:hover,
+.igumetro:hover,
+.PINCHM:hover,
+.PANT:hover,
+.EUNIV:hover,
+.C1917:hover {
+  transform: scale(1.035);
+  filter: brightness(1);
 }
 
-/* Imagen con estilo 3 */
-.pelmetro {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
-
+/* Imagen destacada */
+.focof {
+  width: 60%;
+  border-radius: 14px;
+  margin: 30px auto;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
 }
 
-/* Imagen con estilo 4 */
-.sobmetro {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
-
+.focof:hover {
+  transform: scale(1.06);
 }
 
-/* Imagen con estilo 5 */
-.econmetro {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
-
-}
-
-
-
-/* Imagen con estilo 6 */
-.igumetro {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
-
-}
-
+/* -------------------- BOTÓN LEER MÁS -------------------- */
 .leer-mas2 {
   display: inline-block;
-  padding: 10px 15px;
-  background-color: #10717a;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #00C9A7, #4DD0E1);
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1em;
+  margin-top: 30px;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 1;
 }
 
 .leer-mas2:hover {
-  background-color: #800080;
-
+  background: linear-gradient(135deg, #00B894, #00C9A7);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 768px) {
+  .focof {
+    width: 90%;
+  }
 
-/* Imagen con estilo 6 */
-.PINCHM {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
+  .titulo-blog h1 {
+    font-size: 2em;
+  }
 
+  .articulo h2 {
+    font-size: 1.5em;
+  }
+
+  .blog-container {
+    padding: 25px;
+  }
 }
-  
-/* Imagen con estilo Foco */
-.focof {
-  width: 30%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
-  margin-left: 15%;
-}
-
-
-/* Imagen con estilo 6 */
-.PANT{
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-/* Imagen con estilo 6 */
-.EUNIV{
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-
-
-/* Imagen con estilo 6 */
-.C1917{
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-

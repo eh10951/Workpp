@@ -19,25 +19,52 @@
         </form>
 
         <div class="pregunta">
-            <h2>¿Alguna ves has sufrio una infeccion vaginal por hongos?</h2>
+            <h2>¿Alguna ves has sufrio un acoso en el metro?</h2>
             <p class="detalle">Publicado por Ana | 19 mayo 2025</p>
-            <p>Puedes empezar con etiquetas básicas como &lt;html&gt;, &lt;body&gt;, &lt;h1&gt;, etc. Hay muchos
-                recursos gratuitos.</p>
+            <p>Puedes expresarte libremente 🥰</p>
             <div class="respuesta">
-                <strong>Respuesta:</strong> Te recomiendo W3Schools o MDN Web Docs.
+                <strong>Respuesta:</strong> ninguna
             </div>
         </div>
 
         <div class="pregunta">
-            <h2>¿Cuál es la diferencia entre HTML y CSS?</h2>
+            <h2>¿Cuál ha sido tu mayor inseguridad en el metro de la cdmx?</h2>
             <p class="detalle">Publicado por Luis | 18 mayo 2025</p>
-            <p>¿Alguien me puede explicar la diferencia de forma sencilla?</p>
+            <p> La mia es que me empujen y me caiga 😨</p>
             <div class="respuesta">
-                <strong>Respuesta:</strong> HTML es la estructura (el esqueleto), CSS es el estilo (los colores,
-                tamaños, posiciones).
+                <strong>Respuesta:</strong>ninguna
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.querySelector(".formulario-pregunta");
+            const container = document.querySelector(".foro-container");
+
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                const titulo = form.querySelector("input").value.trim();
+                const texto = form.querySelector("textarea").value.trim();
+
+                if (!titulo || !texto) return;
+
+                const nuevaPregunta = document.createElement("div");
+                nuevaPregunta.className = "pregunta";
+                nuevaPregunta.innerHTML = `
+          <h2>${titulo}</h2>
+          <p class="detalle">Publicado por Usuario | ${new Date().toLocaleDateString()}</p>
+          <p>${texto}</p>
+          <div class="respuesta"><strong>Respuesta:</strong> Aún no hay respuestas.</div>
+        `;
+
+                container.appendChild(nuevaPregunta);
+                form.reset();
+            });
+        });
+    </script>
+
 </body>
 
 </html>
