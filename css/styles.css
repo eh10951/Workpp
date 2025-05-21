@@ -8,7 +8,7 @@
         /* Estilos generales */
         body {
             font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background: linear-gradient(135deg, #f0f4f7, #e8eef1, #d0d8dd);
+            background: linear-gradient(135deg, #fff5f5, #fbf7f4, #ffffff);
             color: #2c3e50;
             line-height: 1.9;
             text-align: center;
@@ -19,14 +19,17 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+
+
         /* Estilos del encabezado */
         header {
-            background: linear-gradient(135deg, #f5f5f5, #e8e8e8, #dcdcdc);
+            background: linear-gradient(135deg, #bedac0, #e8e8e8, #dcacac);
             color: #2c3e50;
             text-align: center;
             border-radius: 15px;
             padding: 30px 0;
-            margin: 20px;
+            margin: 20px -50px;
+            /* Ancho a los lados */
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             position: relative;
             overflow: hidden;
@@ -51,7 +54,7 @@
             color: #34495e;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-family: 'Poppins', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Playfair Display', serif;
             font-weight: 700;
             position: relative;
             z-index: 2;
@@ -333,6 +336,15 @@
             /* Opcional, para centrar texto */
         }
 
+
+        .notas p {
+            font-size: 1.5em;
+            color: #3e1818;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px
+        }
+
         .notas h1 {
             font-size: 2.8em;
             color: brown;
@@ -348,7 +360,7 @@
             width: 100%;
             margin-bottom: 20px
         }
-<<<<<<< HEAD
+
 
         .notvio {
             font-size: 5em;
@@ -368,16 +380,9 @@
 
 
 
-        .notas p {
-            font-size: 1.7em;
-            color: #555;
-            text-align: center;
-            width: 100%;
-            margin-bottom: 20px;
-        }
 
         .noticia {
-            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            background: linear-gradient(145deg, #ffffff, #dedede);
             border: none;
             border-radius: 25px;
             box-shadow: 0 15px 35px rgba(52, 152, 219, 0.1), inset 0 -2px 0 rgba(46, 204, 113, 0.1);
@@ -416,6 +421,12 @@
             margin-bottom: 10px;
         }
 
+        .noticias h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #d95454;
+        }
+
         .noticia p {
             font-size: 1em;
             line-height: 1.6;
@@ -447,7 +458,7 @@
 
 
 
-<<<<<<< HEAD
+
 
         /* Contenedor de tendencias con estilo elegante y profesional */
         /* Contenedor de tendencias con estilo elegante, claro y moderno */
@@ -464,7 +475,7 @@
 
             /* Estilo glass suave con fondo claro */
             border-radius: 20px;
-            background: linear-gradient(145deg, rgba(240, 248, 255, 0.85), rgba(220, 230, 240, 0.85));
+            background: linear-gradient(115deg, #fafcff, #f1f2f3, #ffffff);
             border: 1px solid rgba(200, 200, 200, 0.3);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -486,11 +497,11 @@
         .leer {
             display: inline-block;
             padding: 12px 25px;
-            background: linear-gradient(135deg, #3a3d98, #7f51d6);
+            background: rgb(42, 47, 192, 0.9);
             /* Azul profundo a púrpura suave */
             color: #ffffff;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 20px;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             text-align: center;
             font-family: 'Poppins', sans-serif;
@@ -500,7 +511,9 @@
             margin-right: auto;
             width: fit-content;
             order: 1;
-            box-shadow: 0 6px 18px rgba(60, 64, 90, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 24px rgba(60, 64, 90, 0.3);
+            backdrop-filter: blur(5px);
             /* Sombra más suave y elegante */
         }
 
@@ -519,71 +532,16 @@
             transform: translateY(1px);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
-=======
-/* Contenedor de tendencias con estilo elegante y profesional */
-.tendencias {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 30px;
-    padding: 40px;
-    margin: 40px auto;
-    width: 90%;
-    max-width: 1100px;
-
-    /* Estilo glass suave con fondo claro */
-    border-radius: 20px;
-    background: linear-gradient(145deg, rgba(240, 248, 255, 0.85), rgba(220, 230, 240, 0.85));
-    border: 1px solid rgba(200, 200, 200, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.4s ease;
-}
-
-/* Animación al hacer hover */
-.tendencias:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Botón "leer más" con estilo elegante */
-.leer {
-    display: inline-block;
-    padding: 12px 25px;
-    background: linear-gradient(135deg, #3a3d98, #7f51d6);
-    /* Azul profundo a púrpura suave */
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    order: 1;
-    box-shadow: 0 6px 18px rgba(60, 64, 90, 0.25);
-    /* Sombra más suave y elegante */
-}
-
-.leer:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(60, 64, 90, 0.35);
-}
-
-.leer:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
->>>>>>> e9d41e07dd87cf0ee38e2bd8a584c700f41c51a8
 
 
 
+        .lineadiv {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(52, 152, 219, 0.5), rgba(255, 255, 255, 0));
+            margin: 40px 0;
+            border: none
+        }
 
         /* Estilos del contenido */
         .contenido {
@@ -603,7 +561,7 @@
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             text-align: center;
             font-size: 3.00em;
-            color: #ff6347;
+            color: #5a2a2a;
             /* Rojo */
         }
 
@@ -699,128 +657,136 @@
             border-left-color: #e67e22;
         }
 
+
+
+        /* Estilo del ASIDE */
         aside {
+            width: 20%;
+            max-height: 1000px;
+            /* Ajusta la altura máxima según sea necesario */
+            overflow: auto;
+            /* Agrega scroll si el contenido excede la altura */
+            padding: 18px;
+            margin: 30px 0;
+            /* Elimina el margen horizontal automático */
+            margin-right: 40px;
+            /* Agrega margen a la derecha */
             float: right;
-            width: 25%;
-            padding: 20px;
-            margin-left: 20px; /* Espacio entre el aside y el contenido principal */
-            margin-top: -400%; /* Sube la tarjeta */
+            /* Alinea el aside a la derecha */
             background: linear-gradient(145deg, #3498db, #2ecc71);
-            border-radius: 20px;
+            border-radius: 15px;
             box-shadow:
-                0 15px 30px rgba(0, 0, 0, 0.1),
-                inset 0 2px 10px rgba(255, 255, 255, 0.2);
-
+                0 10px 25px rgba(0, 0, 0, 0.1),
+                inset 0 2px 8px rgba(255, 255, 255, 0.2);
             text-align: left;
-            line-height: 1.8;
+            line-height: 1.4;
             color: #ffffff;
-
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(10px);
-        }
-
-
-        aside p {
-            margin: 20px 0;
-            font-size: 1.3em;
-            color: #e0e7ff;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-        }
-
-        aside ul {
-            padding-left: 20px;
-            margin: 15px 0;
-        }
-
-        aside ul li {
-            margin: 12px 0;
-            line-height: 1.6;
-            color: #f0f8ff;
-            font-size: 1.3em;
-            padding: 12px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            border-left: 3px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+            margin-bottom: 20px;
         }
 
         aside:hover {
-            transform: translateY(-5px) scale(1.01);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
         }
 
         aside h3 {
             color: #ffffff;
-            font-size: 1.5em;
-            margin-bottom: 18px;
+            font-size: 1.4em;
+            margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-            padding-bottom: 10px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            letter-spacing: 2px;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+            padding-bottom: 12px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             font-weight: 600;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        aside p {
+            margin: 20px 0;
+            font-size: 1.1em;
+            color: #f0f8ff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Lista */
         aside ul {
             list-style-type: none;
             padding: 0;
+            margin: 20px 0;
         }
 
         aside ul li {
-            margin: 18px 0;
-            padding: 14px;
-            background: rgba(255, 255, 255, 0.18);
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
+            font-size: 1.2em;
             transition: all 0.3s ease;
+            line-height: 1.6;
         }
 
         aside ul li:hover {
             transform: translateX(5px);
             background: rgba(255, 255, 255, 0.3);
-            border-left-color: rgba(255, 255, 255, 0.7);
         }
 
         aside ul li strong {
-            color: #ff8a65;
+            color: #fff81f;
             font-weight: 600;
         }
 
-        /* Estilos de la tarjeta */
-        .tarjeta,
-        .appm,
-        .imgapp {
-            width: 90%;
-            padding: 18px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-            box-shadow: 0 8px 24px rgb(255, 24, 21, 0.4);
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Estilo del enlace "leer más" */
+        /* Estilo del botón "leer más" */
         .leer-mas {
             display: block;
-            margin: 0 auto;
-            padding: 10px 15px;
-            background: linear-gradient(135deg, #3a3d98, #7f51d6);
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #8e44ad, #6c5ce7);
             color: #ffffff;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            border-radius: 8px;
+            transition: background 0.3s ease;
             text-align: center;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 600;
+            font-size: 1em;
+            margin: 0 auto;
+            width: fit-content;
+        }
+
+        .leer-mas:hover {
+            background: linear-gradient(135deg, #6c5ce7, #8e44ad);
+        }
+
+        /* Imagen centrada */
+        .imgapp {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imgapp img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Tarjetas generales */
+        .tarjeta,
+        .appm {
+            width: 90%;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0px 0px 30px rgb(220, 4, 37, 0.5);
         }
 
         /* Sección de redes sociales */
         .social-media {
             margin-top: 40px;
-            /* Aumenté el margen superior */
             padding: 25px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 12px;
@@ -836,7 +802,6 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            /* Añadí más espacio entre los íconos */
         }
 
         .social-icon {
@@ -855,7 +820,6 @@
 
         .social-icon i {
             margin-right: 12px;
-            /* Aumenté el espacio entre el icono y el texto */
         }
 
         .facebook {
@@ -867,7 +831,7 @@
         }
 
         .whatsapp {
-            background: #25bd3a;
+            background: #25d366;
         }
 
 
@@ -957,3 +921,8 @@
             padding-bottom: 10px;
             transition: all 0.3s ease;
         }
+
+
+
+
+       
