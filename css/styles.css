@@ -8,12 +8,13 @@
         /* Estilos generales */
         body {
             font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background: linear-gradient(135deg, #fff5f5, #fbf7f4, #ffffff);
+            background: linear-gradient(135deg, #ffffff, #ffffff, #e5f6ef),
+                        radial-gradient(circle, rgb(148, 255, 210, 0.3) 0%, rgba(255,255,255,0) 70%); /* Fondo brillante */
             color: #2c3e50;
             line-height: 1.9;
             text-align: center;
             margin: 0;
-            padding: 100px;
+            padding: 110px;
             padding-top: 0;
             box-sizing: border-box;
             -webkit-font-smoothing: antialiased;
@@ -23,7 +24,7 @@
 
         /* Estilos del encabezado */
         header {
-            background: linear-gradient(135deg, #bedac0, #e8e8e8, #dcacac);
+            background: linear-gradient(135deg, #ffffff, #ffffff, #ffffff);
             color: #2c3e50;
             text-align: center;
             border-radius: 15px;
@@ -378,8 +379,18 @@
             margin-bottom: 20px
         }
 
+        .tren {
+          position: absolute;
+          top: 5100px;
+          left: -200px;
+          font-size: 50px;
+          animation: moverTren 10s linear infinite;
+        }
 
-
+        @keyframes moverTren {
+          0% { left: -200px; }
+          100% { left: 100%; }
+        }
 
         .noticia {
             background: linear-gradient(145deg, #ffffff, #dedede);
@@ -419,12 +430,16 @@
         .noticia h2 {
             font-size: 1.8em;
             margin-bottom: 10px;
-        }
+            color: #e67e22;
+            text-shadow:
+                0 0 7px rgba(230, 126, 34, 0.8),
+                0 0 10px rgba(230, 126, 34, 0.8),}
 
         .noticias h3 {
             font-size: 1.5em;
             margin-bottom: 10px;
             color: #d95454;
+            
         }
 
         .noticia p {
@@ -482,12 +497,26 @@
 
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
             transition: all 0.4s ease;
+            animation: glowingBackground 10s infinite alternate;
+        }
+
+        @keyframes glowingBackground {
+            0% {
+                background: linear-gradient(115deg, #ffffff, #f8f8f8, #ffffff);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            }
+
+            100% {
+                background: linear-gradient(115deg, #ffffff, #f0f0f0, #ffffff);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
         }
 
         /* Animación al hacer hover */
         .tendencias:hover {
             transform: translateY(-6px);
-            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+            border-color: rgba(200, 200, 200, 0.5);
         }
 
 
@@ -496,30 +525,47 @@
         /* Botón "leer más" con estilo elegante */
         .leer {
             display: inline-block;
-            padding: 12px 25px;
-            background: rgb(42, 47, 192, 0.9);
-            /* Azul profundo a púrpura suave */
-            color: #ffffff;
+            padding: 14px 28px;
+            background: linear-gradient(120deg, #2980b9, #8e44ad); /* Degradado elegante */
+            color: #fff; /* Texto blanco para mejor contraste */
             text-decoration: none;
-            border-radius: 20px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 30px; /* Bordes más redondeados */
+            transition: all 0.3s ease-in-out; /* Transición suave */
             text-align: center;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Arial', sans-serif; /* Fuente moderna */
             font-weight: 500;
             margin-top: 25px;
             margin-left: auto;
             margin-right: auto;
             width: fit-content;
             order: 1;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 24px rgba(60, 64, 90, 0.3);
-            backdrop-filter: blur(5px);
-            /* Sombra más suave y elegante */
+            border: none; /* Eliminar borde */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .leer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1); /* Overlay blanco transparente */
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            z-index: -1;
+        }
+
+        .leer:hover::before {
+            opacity: 1;
         }
 
         .leer:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 24px rgba(60, 64, 90, 0.35);
+            transform: translateY(-2px); /* Elevación sutil al pasar el mouse */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
         }
 
 
@@ -538,9 +584,10 @@
         .lineadiv {
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(52, 152, 219, 0.5), rgba(255, 255, 255, 0));
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgb(106, 0, 235, 0.5), rgba(255, 255, 255, 0));
             margin: 40px 0;
-            border: none
+            border: none;
+            box-shadow: 0 0 15px rgb(11, 11, 9, 0.3); /* Efecto de luz */
         }
 
         /* Estilos del contenido */
@@ -549,6 +596,7 @@
             justify-content: space-between;
             margin: 40px;
             text-align: left;
+            
         }
 
         article {
@@ -558,13 +606,15 @@
         }
 
         article h2 {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-family: 'Playfair Display', serif;
             text-align: center;
             font-size: 3.00em;
-            color: #5a2a2a;
-            /* Rojo */
+            color: #0f5380;
+            /* Llamativo Red */
+            
         }
 
+        
         article img {
             width: 90%;
             height: auto;
@@ -628,15 +678,22 @@
         }
 
         article h3 {
-            color: #34495e;
-            font-size: 2em;
-            margin: 1.5em 0 1em;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            color: #858229;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.75em;
+            margin: 1.2em 0 0.8em;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: none;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 8px;
+            text-shadow: none;
+            transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+
+        article h3:hover {
+            color: #2980b9;
+            border-color: #2980b9;
         }
 
         article ul li {
@@ -836,7 +893,7 @@
 
 
         footer {
-            background: linear-gradient(135deg, #2193b0, #6dd5ed);
+            background: linear-gradient(135deg, #a3ffdc, #90fee8);
             text-align: center;
             padding: 25px;
             margin: 0;
@@ -862,7 +919,7 @@
         }
 
         footer p {
-            color: #ffffff;
+            color: #000000;
             font-size: 1.2em;
             font-weight: 500;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -883,11 +940,11 @@
 
         @keyframes footerGlow {
             from {
-                box-shadow: 0 -10px 30px rgba(33, 147, 176, 0.2);
+                box-shadow: 0 -10px 30px rgb(118, 254, 213, 0.2);
             }
 
             to {
-                box-shadow: 0 -10px 30px rgba(109, 213, 237, 0.4);
+                box-shadow: 0 -10px 30px rgb(112, 255, 200, 0.4);
             }
         }
 
@@ -917,10 +974,26 @@
             font-family: 'Poppins', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
             letter-spacing: 1px;
             font-weight: 600;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid #bde4ff;
             padding-bottom: 10px;
             transition: all 0.3s ease;
         }
+
+
+
+    .mensaje {
+      position: absolute;
+      top: 1%;
+      left: -100%;
+      white-space: nowrap;
+      font-size: 24px;
+      animation: mensaje 15s linear infinite;
+    }
+
+    @keyframes mensaje {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
 
 
 
