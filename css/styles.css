@@ -7,161 +7,185 @@
 
         /* Estilos generales */
         body {
-            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
             background: linear-gradient(135deg, #ffffff, #ffffff, #e5f6ef),
-                        radial-gradient(circle, rgb(148, 255, 210, 0.3) 0%, rgba(255,255,255,0) 70%); /* Fondo brillante */
+                radial-gradient(circle, rgb(148, 255, 210, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+            /* Fondo brillante */
             color: #2c3e50;
             line-height: 1.9;
             text-align: center;
             margin: 0;
-            padding: 110px;
+            padding: 40px 20px;
             padding-top: 0;
             box-sizing: border-box;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
-
-        /* Estilos del encabezado */
+        /* Estilo del contenedor principal del encabezado */
         header {
-            background: linear-gradient(135deg, #ffffff, #ffffff, #ffffff);
-            color: #2c3e50;
-            text-align: center;
-            border-radius: 15px;
-            padding: 30px 0;
-            margin: 20px -50px;
-            /* Ancho a los lados */
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             position: relative;
+            text-align: center;
+            padding: 60px 20px;
+            margin: 30px -30px;
+            background: linear-gradient(145deg, #f5f7fa, #ffffff, #f1f3f6);
+            border-radius: 20px;
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.8);
+            animation: fadeInHeader 1.5s ease-out both;
+            
         }
 
+
+        /* Luz ambiental sutil giratoria */
         header::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
-            z-index: 1;
+            top: -30%;
+            left: -30%;
+            width: 160%;
+            height: 160%;
+            background: radial-gradient(circle at center, rgba(0, 0, 0, 0.03), transparent 80%);
+            animation: ambientGlow 20s linear infinite;
+            z-index: 0;
+            filter: blur(60px);
         }
 
-        /* Estilos del título principal en el encabezado */
+        /* Título principal */
         header h1 {
             font-size: 3.2em;
-            margin-bottom: 15px;
-            color: #34495e;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Merriweather', serif;
             font-weight: 700;
-            position: relative;
-            z-index: 2;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 15px 30px;
-            border-radius: 10px;
-            display: inline-block;
-            border: 2px solid rgba(52, 73, 94, 0.3);
+            letter-spacing: 2px;
+            color: #442c08;
+            background: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 18px;
+            padding: 20px 40px;
             backdrop-filter: blur(10px);
-            box-shadow:
-                0 5px 15px rgba(0, 0, 0, 0.2),
-                0 0 20px rgba(52, 152, 219, 0.2);
-            animation: titleEffect 3s ease-in-out infinite,
-                glowingBorder 2s ease-in-out infinite alternate;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 0 15px rgba(139, 69, 19, 0.3);
+            
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            animation: textEntrance 1.3s ease-out both;
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            transform: translateX(70px); /* ✅ Nueva línea para mover a la derecha */
+        }
+
+
+        header p {
+            background: rgba(198, 166, 100, 0.08);
+            padding: 8px 20px;
+            border-radius: 24px;
+            color: #503410;
+            font-size: 1.1em;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(65, 41, 22, 0.05);
+            backdrop-filter: blur(6px);
+            z-index: 2;
+            position: relative;
+           
+            text-align: center;
+            transform: translateX(45px); /* ✅ Nueva línea para mover a la derecha */
+        }
+
+        .logo p {
+            font-size: 1.6em;
+            color: #5f4511; /* Un tono dorado suave */
+            text-shadow: 
+                1px 1px 3px rgba(0, 0, 0, 0.0), /* Sombra sutil */
+                0 0 5px rgb(106, 75, 22, 0.3); /* Resplandor dorado */
+            border-bottom: 3px solid rgb(203, 166, 93, 0.7); /* Borde dorado semi-transparente */
+            transition: all 0.4s ease-in-out;
+            font-family: 'Merriweather', serif;
+            padding-bottom: 8px;
+            display: inline-block;
+            margin-top: 10px;
+            letter-spacing: 1px; /* Espaciado para elegancia */
+        }
+
+
+        header h1::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -12px;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(to right, #c6a664, #8c7050);
+            border-radius: 2px;
+            animation: pulseGlow 3s ease-in-out infinite;
         }
 
         header h1:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow:
-                0 10px 25px rgba(0, 0, 0, 0.3),
-                0 0 30px rgba(52, 152, 219, 0.4);
+            transform: scale(1.025) translateY(-4px);
+            box-shadow: 0 12px 32px rgba(198, 166, 100, 0.3), 0 0 45px rgba(198, 166, 100, 0.15);
         }
 
-        @keyframes titleEffect {
-            0% {
-                transform: translateY(0);
-            }
+        /* Subtítulo */
+ 
 
-            50% {
-                transform: translateY(-8px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes glowingBorder {
-            from {
-                border-color: rgba(52, 73, 94, 0.3);
-                text-shadow:
-                    0 0 5px rgba(52, 152, 219, 0.2),
-                    0 0 10px rgba(52, 152, 219, 0.2);
-            }
-
-            to {
-                border-color: rgba(52, 152, 219, 0.6);
-                text-shadow:
-                    0 0 10px rgba(52, 152, 219, 0.4),
-                    0 0 20px rgba(52, 152, 219, 0.4);
-            }
-        }
-
-        /* Estilos del párrafo en el encabezado */
-        header p {
-            font-size: 1.8em;
-            font-family: 'Playfair Display', serif;
-            color: #2c3e50;
-            margin-top: 15px;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
-            position: relative;
-            z-index: 2;
-            opacity: 0.95;
-            background: linear-gradient(120deg, #2c3e50, #34495e);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            padding: 10px 20px;
-            border-radius: 8px;
-            letter-spacing: 1.2px;
-            font-weight: 600;
-        }
-
-        /* Estilos de la imagen en el encabezado */
+        /* Imagen decorativa mejorada */
         header img {
-            width: 10%;
-            margin: 10px 0;
-            transition: all 0.5s ease-in-out;
-            animation: float 3s ease-in-out infinite;
-            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+            width: 9%;
+            transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+            animation: float 5s ease-in-out infinite;
+            filter: brightness(1.03) contrast(1.05);
+            z-index: 2;
+            position: relative;
         }
 
-        header img:hover {
-            transform: scale(1.1) rotate(5deg);
-            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
+        /* Imagen superior */
+        header img:first-of-type {
+            transform: translateY(-40px) translateX(-220px);
         }
 
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
+        /* Imagen inferior */
+        header img:last-of-type {
+            transform: translateY(60px) translateX(-110px);
         }
 
-        /* Animación diferente para la segunda imagen */
-        header img:nth-child(2) {
-            animation: float 3s ease-in-out infinite 1.5s;
+
+
+
+
+
+
+
+
+
+        .logo p:hover {
+            color: #7c1313;
+            /* Cambia a blanco al hacer hover */
+            border-bottom-color: #bdc3c7;
+            /* Un tono más claro al hover */
+            transform: translateY(-3px);
+            /* Elevación sutil al hacer hover */
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.7);
+            /* Sombra más intensa al hacer hover */
         }
+
+        .logo p::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #fff, transparent);
+            transform: translateX(-100%);
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .logo p:hover::before {
+            transform: translateX(0);
+        }
+
 
         /* Estilos del texto dentro del logo */
         .txlogo {
@@ -200,78 +224,109 @@
         .unrc {
             font-size: 2.9em;
             margin: 10px 0;
+            color: #58512d;
+            text-shadow: 0 0 2px #9d9043; /* Efecto de luz */
         }
-
         .universidad {
             font-size: 1.5em;
             margin: 10px 0;
+            color: #a99c5b;
         }
 
-        /* Estilos del menú de navegación */
+        /* Menú principal con gradiente de lujo y animaciones de fondo */
         .menu {
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background: linear-gradient(135deg, #0b1a28, #302b63, #24243e);
             padding: 20px 0;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             position: relative;
             overflow: hidden;
-            z-index: 1;
+            z-index: 10;
         }
 
+        /* Efecto de brillo animado sutil en el fondo */
         .menu::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-            z-index: -1;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.07), transparent 70%);
+            animation: rotateBackground 30s linear infinite;
+            z-index: 0;
+            pointer-events: none;
+            filter: blur(80px);
         }
 
+        /* Lista de navegación centrada con espacio entre elementos */
         .menu ul {
-            list-style-type: none;
+            list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
         }
 
+        /* Estilos del ítem del menú */
         .menu ul li {
             position: relative;
         }
 
+        /* Estilos de los enlaces del menú */
         .menu ul li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 1.4em;
-            padding: 10px 20px;
+            position: relative;
             display: inline-block;
             font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.3em;
+            color: #fdfdfd;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
+            letter-spacing: 1.2px;
+            padding: 12px 22px;
+            text-decoration: none;
+            transition: transform 0.4s ease, color 0.4s ease, text-shadow 0.4s ease;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.05), transparent);
+            border-radius: 12px;
+            overflow: hidden;
         }
 
+        /* Subrayado animado personalizado */
         .menu ul li a::before {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: 8px;
             left: 0;
             width: 100%;
             height: 2px;
-            background: #ffffff;
+            background: linear-gradient(to right, #ff6a00, #ffcc00);
             transform: scaleX(0);
             transform-origin: right;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: transform 0.4s ease-in-out;
+            border-radius: 1px;
         }
 
+        /* Efecto brillo dinámico al pasar el mouse */
+        .menu ul li a::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: skewX(-25deg);
+            transition: none;
+            pointer-events: none;
+        }
+
+        /* Hover elegante con movimiento */
         .menu ul li a:hover {
-            color: #ffffff;
-            transform: translateY(-3px);
-            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transform: translateY(-4px) scale(1.02);
+            color: #ffcc70;
+            text-shadow: 0 0 10px rgba(255, 204, 112, 0.5);
         }
 
         .menu ul li a:hover::before {
@@ -279,9 +334,36 @@
             transform-origin: left;
         }
 
-        .menu ul li a:active {
-            transform: translateY(1px);
+        .menu ul li a:hover::after {
+            animation: shine 1s ease-out;
         }
+
+        /* Click rápido */
+        .menu ul li a:active {
+            transform: scale(0.98);
+        }
+
+        /* Animaciones */
+        @keyframes rotateBackground {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                left: -75%;
+            }
+
+            100% {
+                left: 125%;
+            }
+        }
+
 
         /* Estilos del contenedor vozmetro */
         .vozmetro {
@@ -380,16 +462,21 @@
         }
 
         .tren {
-          position: absolute;
-          top: 5100px;
-          left: -200px;
-          font-size: 50px;
-          animation: moverTren 10s linear infinite;
+            position: absolute;
+            top: 5100px;
+            left: -200px;
+            font-size: 50px;
+            animation: moverTren 10s linear infinite;
         }
 
         @keyframes moverTren {
-          0% { left: -200px; }
-          100% { left: 100%; }
+            0% {
+                left: -200px;
+            }
+
+            100% {
+                left: 100%;
+            }
         }
 
         .noticia {
@@ -433,13 +520,14 @@
             color: #e67e22;
             text-shadow:
                 0 0 7px rgba(230, 126, 34, 0.8),
-                0 0 10px rgba(230, 126, 34, 0.8),}
+                0 0 10px rgba(230, 126, 34, 0.8),
+        }
 
         .noticias h3 {
             font-size: 1.5em;
             margin-bottom: 10px;
             color: #d95454;
-            
+
         }
 
         .noticia p {
@@ -526,21 +614,28 @@
         .leer {
             display: inline-block;
             padding: 14px 28px;
-            background: linear-gradient(120deg, #2980b9, #8e44ad); /* Degradado elegante */
-            color: #fff; /* Texto blanco para mejor contraste */
+            background: linear-gradient(120deg, #2980b9, #8e44ad);
+            /* Degradado elegante */
+            color: #fff;
+            /* Texto blanco para mejor contraste */
             text-decoration: none;
-            border-radius: 30px; /* Bordes más redondeados */
-            transition: all 0.3s ease-in-out; /* Transición suave */
+            border-radius: 30px;
+            /* Bordes más redondeados */
+            transition: all 0.3s ease-in-out;
+            /* Transición suave */
             text-align: center;
-            font-family: 'Arial', sans-serif; /* Fuente moderna */
+            font-family: 'Arial', sans-serif;
+            /* Fuente moderna */
             font-weight: 500;
             margin-top: 25px;
             margin-left: auto;
             margin-right: auto;
             width: fit-content;
             order: 1;
-            border: none; /* Eliminar borde */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+            border: none;
+            /* Eliminar borde */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            /* Sombra sutil */
             position: relative;
             overflow: hidden;
             z-index: 1;
@@ -553,7 +648,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.1); /* Overlay blanco transparente */
+            background: rgba(255, 255, 255, 0.1);
+            /* Overlay blanco transparente */
             opacity: 0;
             transition: opacity 0.4s ease-in-out;
             z-index: -1;
@@ -564,8 +660,10 @@
         }
 
         .leer:hover {
-            transform: translateY(-2px); /* Elevación sutil al pasar el mouse */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
+            transform: translateY(-2px);
+            /* Elevación sutil al pasar el mouse */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            /* Sombra más pronunciada al pasar el mouse */
         }
 
 
@@ -587,16 +685,18 @@
             background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgb(106, 0, 235, 0.5), rgba(255, 255, 255, 0));
             margin: 40px 0;
             border: none;
-            box-shadow: 0 0 15px rgb(11, 11, 9, 0.3); /* Efecto de luz */
+            box-shadow: 0 0 15px rgb(11, 11, 9, 0.3);
+            /* Efecto de luz */
         }
 
         /* Estilos del contenido */
         .contenido {
             display: flex;
             justify-content: space-between;
-            margin: 40px;
             text-align: left;
-            
+            max-width: 1200px;
+            margin: 0 auto;
+
         }
 
         article {
@@ -611,10 +711,10 @@
             font-size: 3.00em;
             color: #0f5380;
             /* Llamativo Red */
-            
+
         }
 
-        
+
         article img {
             width: 90%;
             height: auto;
@@ -981,21 +1081,21 @@
 
 
 
-    .mensaje {
-      position: absolute;
-      top: 1%;
-      left: -100%;
-      white-space: nowrap;
-      font-size: 24px;
-      animation: mensaje 15s linear infinite;
-    }
+        .mensaje {
+            position: absolute;
+            top: 1%;
+            left: -100%;
+            white-space: nowrap;
+            font-size: 24px;
+            animation: mensaje 15s linear infinite;
+        }
 
-    @keyframes mensaje {
-      0% { left: -100%; }
-      100% { left: 100%; }
-    }
+        @keyframes mensaje {
+            0% {
+                left: -100%;
+            }
 
-
-
-
-       
+            100% {
+                left: 100%;
+            }
+        }
