@@ -67,45 +67,41 @@
             padding: 20px 40px;
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 0 15px rgba(139, 69, 19, 0.3);
-            
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            animation: textEntrance 1.3s ease-out both;
+            position: relative;
             display: inline-block;
             text-align: center;
-            position: relative;
-            transform: translateX(70px); /* ✅ Nueva línea para mover a la derecha */
+            transform: translateX(70px);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            animation: textEntrance 1.3s ease-out both;
         }
 
 
         header p {
-            background: rgba(198, 166, 100, 0.08);
-            padding: 8px 20px;
-            border-radius: 24px;
-            color: #503410;
             font-size: 1.1em;
             font-weight: 500;
+            color: #503410;
+            background: rgba(198, 166, 100, 0.08);
+            border-radius: 24px;
+            padding: 8px 20px;
             box-shadow: 0 4px 12px rgba(65, 41, 22, 0.05);
             backdrop-filter: blur(6px);
-            z-index: 2;
             position: relative;
-           
+            z-index: 2;
             text-align: center;
-            transform: translateX(45px); /* ✅ Nueva línea para mover a la derecha */
+            transform: translateX(45px);
         }
 
         .logo p {
             font-size: 1.6em;
-            color: #5f4511; /* Un tono dorado suave */
-            text-shadow: 
-                1px 1px 3px rgba(0, 0, 0, 0.0), /* Sombra sutil */
-                0 0 5px rgb(106, 75, 22, 0.3); /* Resplandor dorado */
-            border-bottom: 3px solid rgb(203, 166, 93, 0.7); /* Borde dorado semi-transparente */
-            transition: all 0.4s ease-in-out;
             font-family: 'Merriweather', serif;
-            padding-bottom: 8px;
-            display: inline-block;
+            color: #5f4511;
+            letter-spacing: 1px;
             margin-top: 10px;
-            letter-spacing: 1px; /* Espaciado para elegancia */
+            padding-bottom: 8px;
+            text-shadow: 0 0 5px rgb(106, 75, 22, 0.3), 1px 1px 3px rgba(0, 0, 0, 0.0);
+            border-bottom: 3px solid rgb(203, 166, 93, 0.7);
+            display: inline-block;
+            transition: all 0.4s ease-in-out;
         }
 
 
@@ -114,9 +110,9 @@
             position: absolute;
             left: 50%;
             bottom: -12px;
-            transform: translateX(-50%);
             width: 70px;
             height: 3px;
+            transform: translateX(-50%);
             background: linear-gradient(to right, #c6a664, #8c7050);
             border-radius: 2px;
             animation: pulseGlow 3s ease-in-out infinite;
@@ -133,11 +129,11 @@
         /* Imagen decorativa mejorada */
         header img {
             width: 9%;
+            position: relative;
+            z-index: 2;
+            filter: brightness(1.03) contrast(1.05);
             transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
             animation: float 5s ease-in-out infinite;
-            filter: brightness(1.03) contrast(1.05);
-            z-index: 2;
-            position: relative;
         }
 
         /* Imagen superior */
@@ -149,7 +145,6 @@
         header img:last-of-type {
             transform: translateY(60px) translateX(-110px);
         }
-
 
 
 
