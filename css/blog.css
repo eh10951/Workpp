@@ -84,6 +84,16 @@ body {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
 }
 
+
+.articulo h1{
+  color: #ffffff;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00C9A7;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 1
+}
 .articulo h2 {
   color: #0c3c78;
   font-size: 1.8em;
@@ -204,61 +214,90 @@ body {
 .grafica-container {
   max-width: 800px;
   margin: 40px auto;
-  padding: 20px;
-  background-color: #ffffff; /* bg-gray-800 */
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  color: white;
+  padding: 30px;
+  background-color: #2d3e50; /* Darker background for contrast */
+  border-radius: 1.25rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.grafica-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+.grafica-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to right, #ff4f81, #ffaf7b); /* Vibrant gradient */
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
 }
 
 .grafica-titulo {
   text-align: center;
-  font-size: 1.75rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #ec4899; /* text-pink-500 */
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #a51d2d;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease;
+}
+
+.grafica-container:hover .grafica-titulo {
+  color: #ff4f81; /* Highlight color */
 }
 
 .grafica-box {
-  padding: 10px;
-  background-color: #111827; /* bg-gray-900 */
-  border-radius: 1rem;
-}
-
-.grafica-descripcion {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #9ca3af; /* text-gray-400 */
-  margin-top: 16px;
-}
-
-
-.grafica-container {
-  max-width: 800px;
-  margin: 40px auto;
   padding: 20px;
-  background-color: #ffffff; /* gris oscuro */
+  background-color: #34495e; /* Darker box */
   border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  color: white;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
-.grafica-titulo {
-  text-align: center;
-  font-size: 1.75rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.grafica-box {
-  padding: 10px;
-  background-color: #111827; /* negro grisáceo */
-  border-radius: 1rem;
+.grafica-container:hover .grafica-box {
+  background-color: #4a6572; /* Slightly lighter hover */
 }
 
 .grafica-descripcion {
   text-align: center;
-  font-size: 0.9rem;
-  color: #9ca3af;
-  margin-top: 16px;
+  font-size: 1rem;
+  color: #ffffff; /* Lighter text */
+  margin-top: 20px;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.grafica-container:hover .grafica-descripcion {
+  color: #ffffff; /* White on hover */
+}
+
+
+/* Keyframes for subtle pulsating animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* Apply pulsating animation to the chart box */
+.grafica-box {
+  animation: pulse 5s infinite cubic-bezier(0.4, 0, 0.6, 1);
 }
