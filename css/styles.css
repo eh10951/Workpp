@@ -492,20 +492,22 @@
         .tren {
             position: absolute;
             top: 40px;
-            left: -200px;
+            left: -100%; /* Empieza fuera del lado izquierdo */
             font-size: 50px;
+            white-space: nowrap; /* Mantiene los íconos en una sola línea */
             animation: moverTren 10s linear infinite;
         }
 
         @keyframes moverTren {
             0% {
-                left: -200px;
+                left: -100%; /* Comienza fuera del lado izquierdo */
             }
-
             100% {
-                left: 100vw; /* Usa viewport width para asegurar que desaparezca completamente */
+                left: 100vw; /* Termina fuera del lado derecho */
             }
         }
+
+
 
         .noticia {
             background: linear-gradient(145deg, #ffffff, #dedede);
