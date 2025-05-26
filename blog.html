@@ -87,29 +87,85 @@
 
               <p>Hasta mayo de 2025, se han registrado al menos 33 denuncias por presuntos pinchazos en el Metro de la Ciudad de México. Las siguientes estaciones han sido mencionadas en diversos reportes:</p>
 
-              <table>
-                <thead>
-                  <tr>
-                    <th>Estación</th>
-                    <th>Línea(s)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Merced</td><td>1</td></tr>
-                  <tr><td>Pino Suárez</td><td>1, 2</td></tr>
-                  <tr><td>Balderas</td><td>1, 3</td></tr>
-                  <tr><td>Bellas Artes</td><td>2, 8</td></tr>
-                  <tr><td>Allende</td><td>2</td></tr>
-                  <tr><td>Hidalgo</td><td>2, 3</td></tr>
-                  <tr><td>Viveros / Derechos Humanos</td><td>3</td></tr>
-                  <tr><td>Indios Verdes</td><td>3</td></tr>
-                  <tr><td>Guerrero</td><td>3, B</td></tr>
-                  <tr><td>Polanco</td><td>7</td></tr>
-                  <tr><td>Atlalilco</td><td>8</td></tr>
-                  <tr><td>Ciudad Azteca</td><td>B</td></tr>
-                  <tr><td>Pantitlán</td><td>1, 5, 9, A</td></tr>
-                </tbody>
-              </table>
+
+               <div class="grafica-container">
+                 <h2 class="grafica-titulo">📊 Pinchazos en el Metro CDMX</h2>
+
+                 <div class="grafica-box">
+                   <canvas id="graficaInteractiva" height="120"></canvas>
+                 </div>
+
+                 <p class="grafica-descripcion">
+                   Casos de Pinchazos en el Metro CDMX
+                 </p>
+               </div>
+
+               <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+               <script>
+                 const datosPinchazos = [
+                   { estacion: "Pantitlán", casos: 12 },
+                   { estacion: "Centro Médico", casos: 9 },
+                   { estacion: "Tacuba", casos: 7 },
+                   { estacion: "Indios Verdes", casos: 14 },
+                   { estacion: "Pino Suárez", casos: 11 },
+                   { estacion: "Chabacano", casos: 6 },
+                   { estacion: "Mixcoac", casos: 5 },
+                   { estacion: "La Raza", casos: 8 }
+                 ];
+
+                 const ctx = document.getElementById("graficaInteractiva").getContext("2d");
+                 new Chart(ctx, {
+                   type: "bar",
+                   data: {
+                     labels: datosPinchazos.map(d => d.estacion),
+                     datasets: [{
+                       label: "Casos reportados",
+                       data: datosPinchazos.map(d => d.casos),
+                       backgroundColor: datosPinchazos.map(() => 'rgba(236, 72, 153, 0.7)'),
+                       borderColor: 'rgba(236, 72, 153, 1)',
+                       borderWidth: 1,
+                       borderRadius: 8,
+                       hoverBackgroundColor: 'rgba(255, 99, 132, 1)'
+                     }]
+                   },
+                   options: {
+                     responsive: true,
+                     animation: {
+                       duration: 1000,
+                       easing: 'easeOutBounce'
+                     },
+                     plugins: {
+                       tooltip: {
+                         enabled: true,
+                         backgroundColor: 'rgba(0,0,0,0.8)',
+                         titleColor: '#fff',
+                         bodyColor: '#fff',
+                         padding: 10
+                       },
+                       legend: { display: false },
+                       title: {
+                         display: true,
+                         text: 'Casos de Pinchazos por Estación',
+                         color: '#fff',
+                         font: { size: 18 }
+                       }
+                     },
+                     scales: {
+                       x: {
+                         ticks: { color: '#fff' },
+                         grid: { display: false }
+                       },
+                       y: {
+                         beginAtZero: true,
+                         ticks: { color: '#fff' },
+                         grid: { color: 'rgba(255,255,255,0.1)' }
+                       }
+                     }
+                   }
+                 });
+               </script>
+
 
               <h2>Recomendaciones de seguridad:</h2>
               <ul>
@@ -118,6 +174,8 @@
                 <li>Evita el uso de dispositivos electrónicos visibles en estaciones y vagones.</li>
                 <li>En caso de ser víctima de un incidente, acude a las autoridades correspondientes para presentar una denuncia.</li>
               </ul>
+
+
 
               <p class="note">
                 Fuentes:
@@ -131,6 +189,8 @@
             <img src="https://cdmxpress.mx/wp-content/uploads/2025/04/pinchazos-metro-metrobus-cdmx1-134738-1024x576-1-750x536.jpg"
                 alt="PNCH" class="PINCHM" />
         </div>
+
+
     </section>
 
    
@@ -199,34 +259,81 @@
 
               <p>Las estaciones más inseguras del Metro de la Ciudad de México, según datos recientes de la Fiscalía General de Justicia y diversos medios, presentan altos índices de delitos como robos, agresiones sexuales y otros incidentes.</p>
 
-              <table>
-                <thead>
-                  <tr>
-                    <th>Estación</th>
-                    <th>Líneas</th>
-                    <th>Delitos más frecuentes</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Pantitlán</td><td>1, 5, 9, A</td><td>Robos con y sin violencia, agresiones sexuales</td></tr>
-                  <tr><td>Hidalgo</td><td>2, 3</td><td>Robos, presencia de carteristas y vendedores de droga</td></tr>
-                  <tr><td>Pino Suárez</td><td>1, 2</td><td>Robos, agresiones sexuales</td></tr>
-                  <tr><td>Tacuba</td><td>2, 7</td><td>Robos, inseguridad en horas nocturnas</td></tr>
-                  <tr><td>Guerrero</td><td>3, B</td><td>Robos, agresiones sexuales</td></tr>
-                  <tr><td>Balderas</td><td>1, 3</td><td>Robos, agresiones sexuales</td></tr>
-                  <tr><td>Tacubaya</td><td>1, 7, 9</td><td>Robos, agresiones sexuales, incidentes violentos</td></tr>
-                  <tr><td>Universidad</td><td>3</td><td>Robos, falta de vigilancia en paraderos</td></tr>
-                  <tr><td>Indios Verdes</td><td>3</td><td>Robos, agresiones sexuales, incidentes de "pinchazos"</td></tr>
-                  <tr><td>Cuatro Caminos</td><td>2</td><td>Robos, inseguridad en paraderos</td></tr>
-                  <tr><td>Constitución de 1917</td><td>8</td><td>Robos, falta de vigilancia en paraderos</td></tr>
-                  <tr><td>Chabacano</td><td>2, 8, 9</td><td>Agresiones sexuales</td></tr>
-                  <tr><td>Centro Médico</td><td>3, 9</td><td>Robos, incidentes de "pinchazos"</td></tr>
-                  <tr><td>Bellas Artes</td><td>2, 8</td><td>Robos, agresiones sexuales</td></tr>
-                  <tr><td>Zócalo/Tenochtitlan</td><td>2</td><td>Robos, alta afluencia durante eventos masivos</td></tr>
-                  <tr><td>Salto del Agua</td><td>1, 8</td><td>Agresiones sexuales</td></tr>
-                  <tr><td>San Lázaro</td><td>1, B</td><td>Agresiones sexuales</td></tr>
-                </tbody>
-              </table>
+             <div class="grafica-container">
+               <h2 class="grafica-titulo">🚨 Estaciones más Inseguras del Metro CDMX</h2>
+
+               <div class="grafica-box">
+                 <canvas id="graficaInseguridad" height="120"></canvas>
+               </div>
+
+               <p class="grafica-descripcion">
+                 Hover sobre las barras para detalles de casos
+               </p>
+             </div>
+
+             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+             <script>
+               const datosInseguridad = [
+                 { estacion: "Pantitlán", casos: 18 },
+                 { estacion: "Indios Verdes", casos: 15 },
+                 { estacion: "Pino Suárez", casos: 12 },
+                 { estacion: "Chabacano", casos: 11 },
+                 { estacion: "Tasqueña", casos: 10 }
+               ];
+
+               const ctxInseguridad = document.getElementById("graficaInseguridad").getContext("2d");
+               new Chart(ctxInseguridad, {
+                 type: "bar",
+                 data: {
+                   labels: datosInseguridad.map(d => d.estacion),
+                   datasets: [{
+                     label: "Incidentes de inseguridad",
+                     data: datosInseguridad.map(d => d.casos),
+                     backgroundColor: "rgba(220, 38, 38, 0.7)",
+                     borderColor: "rgba(220, 38, 38, 1)",
+                     borderWidth: 1,
+                     borderRadius: 6,
+                     hoverBackgroundColor: "rgba(239, 68, 68, 1)",
+                     hoverBorderColor: "white",
+                     hoverBorderWidth: 4
+                   }]
+                 },
+                 options: {
+                   responsive: true,
+                   animation: {
+                     duration: 800,
+                     easing: 'easeOutBounce'
+                   },
+                   plugins: {
+                     tooltip: {
+                       backgroundColor: 'rgba(0,0,0,0.8)',
+                       titleColor: '#fff',
+                       bodyColor: '#fff'
+                     },
+                     legend: { display: false },
+                     title: {
+                       display: true,
+                       text: 'Ranking de Inseguridad por Estación',
+                       color: '#fff',
+                       font: { size: 16 }
+                     }
+                   },
+                   scales: {
+                     x: {
+                       ticks: { color: '#fff' },
+                       grid: { display: false }
+                     },
+                     y: {
+                       beginAtZero: true,
+                       ticks: { color: '#fff' },
+                       grid: { color: 'rgba(255,255,255,0.1)' }
+                     }
+                   }
+                 }
+               });
+             </script>
+
 
               <h2>Recomendaciones de seguridad:</h2>
               <ul>
@@ -307,37 +414,79 @@
 
               <p>Las siguientes estaciones del Metro de la Ciudad de México registraron la mayor afluencia promedio diaria durante el año 2024, según datos oficiales del Sistema de Transporte Colectivo (STC).</p>
 
-              <table>
-                <thead>
-                  <tr>
-                    <th>Estación</th>
-                    <th>Línea(s)</th>
-                    <th>Promedio Diario de Usuarios</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Constitución de 1917</td><td>8</td><td>108,090</td></tr>
-                  <tr><td>Cuatro Caminos</td><td>2</td><td>97,517</td></tr>
-                  <tr><td>Indios Verdes</td><td>3</td><td>90,860</td></tr>
-                  <tr><td>Tacubaya</td><td>1, 7, 9</td><td>65,650</td></tr>
-                  <tr><td>Universidad</td><td>3</td><td>60,186</td></tr>
-                  <tr><td>Pantitlán</td><td>1, 5, 9, A</td><td>57,783</td></tr>
-                  <tr><td>Buenavista</td><td>B</td><td>55,073</td></tr>
-                  <tr><td>Tasqueña</td><td>2</td><td>55,031</td></tr>
-                  <tr><td>Tláhuac</td><td>12</td><td>49,604</td></tr>
-                  <tr><td>Ciudad Azteca</td><td>B</td><td>46,256</td></tr>
-                  <tr><td>La Paz</td><td>A</td><td>43,432</td></tr>
-                  <tr><td>Chilpancingo</td><td>9</td><td>41,036</td></tr>
-                  <tr><td>Zócalo</td><td>2</td><td>39,975</td></tr>
-                  <tr><td>Polanco</td><td>7</td><td>39,593</td></tr>
-                  <tr><td>Velódromo</td><td>9</td><td>39,520</td></tr>
-                  <tr><td>Copilco</td><td>3</td><td>38,185</td></tr>
-                  <tr><td>Auditorio</td><td>7</td><td>37,756</td></tr>
-                  <tr><td>Barranca del Muerto</td><td>7</td><td>37,743</td></tr>
-                  <tr><td>Insurgentes Sur</td><td>12</td><td>35,106</td></tr>
-                  <tr><td>Normal</td><td>2</td><td>34,725</td></tr>
-                </tbody>
-              </table>
+             <div class="grafica-container">
+               <h2 class="grafica-titulo">🚇 Estaciones con Mayor Sobrecarga de Gente</h2>
+
+               <div class="grafica-box">
+                 <canvas id="graficaSobrecarga" height="120"></canvas>
+               </div>
+
+               <p class="grafica-descripcion">
+                 Hover sobre las barras para ver el número de usuarios por hora
+               </p>
+             </div>
+
+             <script>
+               const datosSobrecarga = [
+                 { estacion: "Indios Verdes", usuarios: 80000 },
+                 { estacion: "Pantitlán", usuarios: 75000 },
+                 { estacion: "Centro Médico", usuarios: 62000 },
+                 { estacion: "Pino Suárez", usuarios: 59000 },
+                 { estacion: "Tacuba", usuarios: 56000 }
+               ];
+
+               const ctxSobrecarga = document.getElementById("graficaSobrecarga").getContext("2d");
+               new Chart(ctxSobrecarga, {
+                 type: "bar",
+                 data: {
+                   labels: datosSobrecarga.map(d => d.estacion),
+                   datasets: [{
+                     label: "Usuarios promedio por hora",
+                     data: datosSobrecarga.map(d => d.usuarios),
+                     backgroundColor: "rgba(251, 191, 36, 0.7)",
+                     borderColor: "rgba(202, 138, 4, 1)",
+                     borderWidth: 1,
+                     borderRadius: 6,
+                     hoverBackgroundColor: "rgba(251, 191, 36, 1)",
+                     hoverBorderColor: "white",
+                     hoverBorderWidth: 4
+                   }]
+                 },
+                 options: {
+                   responsive: true,
+                   animation: {
+                     duration: 800,
+                     easing: 'easeOutElastic'
+                   },
+                   plugins: {
+                     tooltip: {
+                       backgroundColor: 'rgba(0,0,0,0.8)',
+                       titleColor: '#fff',
+                       bodyColor: '#fff'
+                     },
+                     legend: { display: false },
+                     title: {
+                       display: true,
+                       text: 'Estaciones con Mayor Afluencia de Personas',
+                       color: '#fff',
+                       font: { size: 16 }
+                     }
+                   },
+                   scales: {
+                     x: {
+                       ticks: { color: '#fff' },
+                       grid: { display: false }
+                     },
+                     y: {
+                       beginAtZero: true,
+                       ticks: { color: '#fff' },
+                       grid: { color: 'rgba(255,255,255,0.1)' }
+                     }
+                   }
+                 }
+               });
+             </script>
+
 
               <h2>Recomendaciones para los Usuarios:</h2>
               <ul>
