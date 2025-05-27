@@ -10,6 +10,16 @@
 
     <link rel="stylesheet " href="css/styles.css">
 
+    <script>
+        // Si llegas con el historial hacia atrás, forza recarga completa
+        window.onpageshow = function (event) {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        };
+    </script>
+
+
 
 </head>
 
@@ -161,7 +171,7 @@
 
     </div>
 
-    
+
 
 
     <section class="contenido">
