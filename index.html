@@ -111,7 +111,7 @@
 
             <article class="noticia">
 
-                <h2>PINCHAZOS!!!!? 😱</h2>
+                <h2>¡PINCHAZOS! 😱</h2>
                 <img src="imagenes/pinchazo.jpg" alt="pinchazos" class="notpin">
 
 
@@ -141,7 +141,7 @@
 
             <article class="noticia">
 
-                <h2>ESTACIONES SATURADAS!!</h2>
+                <h2>¡ESTACIONES SATURADAS!</h2>
 
                 <img src="https://tvazteca.brightspotcdn.com/dims4/default/d2f4986/2147483647/strip/true/crop/1280x720+0+0/resize/928x522!/format/webp/quality/90/?url=http%3A%2F%2Ftv-azteca-brightspot.s3.amazonaws.com%2Fd1%2F4f%2F12033ad34d5db8867cb09d82dd47%2Fmetro-cdmx-que-pasa-11-marzo-2024.jpg"
                     alt="Imagen de la noticia 3" , class="notest">
@@ -228,7 +228,7 @@
 
             <img src="https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/SUK44NNRSBFX5O46XHJ4VXYMFM.jpg">
 
-            <h3> Analisis de Datos </h3>
+            <h3> Análisis de Datos </h3>
 
             <p> Se llevó a cabo un proceso de investigación que comprendió la recopilación, depuración, análisis y
                 visualización de datos, con el propósito de obtener conclusiones fundamentadas a partir de la
@@ -244,11 +244,11 @@
             <p> En este data set podemos observar los siguietes datos: </p>
             <img src="imagenes/contenidofoto.png" , alt="contenidofoto" ,class="contenidofoto">
 
-            <h3> Grafica de afluencia del metro por año 2021 - 2025 </h3>
+            <h3> Gráfica de afluencia del metro por año 2021 - 2025 </h3>
 
             <img src="imagenes/graficaaf.png" , alt="grafica" ,class="grafica">
 
-            <p>En la grafica podemos observar que a medida que van avanzando los años, la afluencia en el metro
+            <p>En la gráfica podemos observar que a medida que van avanzando los años, la afluencia en el metro
                 va
                 incrementando gradualmente , se notan algunas bajas y posteriormente unas altas en la afluencia.
             </p>
@@ -264,7 +264,7 @@
                 un total de "104,863,384" personas que usan el metro</p>
 
 
-            <h3> Grafica de barras de afluencia 2025-01-01 - 2025-03-31 </h3>
+            <h3> Gráfica de barras de afluencia 2025-01-01 - 2025-03-31 </h3>
 
             <p> El gráfico presentado corresponde a una gráfica de barras horizontales que representa la afluencia total
                 por línea del Sistema de Transporte Colectivo Metro de la Ciudad de México, durante el periodo
@@ -330,6 +330,150 @@
                 enero al 31 de marzo de 2025, lo cual proporciona una perspectiva reciente, aunque
                 limitada temporalmente, sobre los patrones de movilidad en el sistema (Datos Abiertos CDMX, 2025).
             </p>
+
+            <hr>
+            <h3> Gráfica Regresión polinomial de grado 3 </h3>
+
+            <img src="imagenes/regresion.png" , alt="barra" ,class="bar2">
+
+
+
+            <div class="section">
+                <h2>Matriz de diseño (A):</h2>
+                <pre>
+            [[    1     0     0     0]
+             [    1     1     1     1]
+             [    1     2     4     8]
+             [    1     3     9    27]
+             [    1     4    16    64]
+             [    1     5    25   125]
+             [    1     6    36   216]
+             [    1     7    49   343]
+             [    1     8    64   512]
+             [    1     9    81   729]
+             [    1    10   100  1000]
+             [    1    11   121  1331]
+             [    1    12   144  1728]
+             [    1    13   169  2197]
+             [    1    14   196  2744]
+             [    1    15   225  3375]
+             [    1    16   256  4096]
+             [    1    17   289  4913]
+             [    1    18   324  5832]
+             [    1    19   361  6859]
+             [    1    20   400  8000]
+             [    1    21   441  9261]
+             [    1    22   484 10648]
+             [    1    23   529 12167]
+             [    1    24   576 13824]
+             [    1    25   625 15625]
+             [    1    26   676 17576]
+             [    1    27   729 19683]
+             [    1    28   784 21952]
+             [    1    29   841 24389]]
+                </pre>
+            </div>
+
+            <div class="section">
+                <h2>Vector de salida (y):</h2>
+                <pre>
+            [ 40.053642  50.345212  55.277359  65.482779  69.822009  67.954499
+              78.912     86.754004  70.55607   80.060562  88.752612  93.254624
+              95.90448   92.245621  87.254876  99.393033  86.463757  97.667492
+              98.257495  92.254404  90.754067  88.843064  90.754067  97.667492
+              98.257495 101.6746    99.254064 100.754838 104.064384  94.247723]
+                    </pre>
+            </div>
+
+            <div class="section">
+                <h2>Matriz A<sup>T</sup> * A:</h2>
+                <pre>
+            [[        30        435       8555     189225]
+             [       435       8555     189225    4463999]
+             [      8555     189225    4463999  109687425]
+             [    189225    4463999  109687425 2771931215]]
+                    </pre>
+            </div>
+
+            <div class="section">
+                <h2>Matriz A<sup>T</sup> * y:</h2>
+                <pre>
+            [2.56293832e+03 4.06549714e+04 8.18903464e+05 1.83135916e+07]
+                    </pre>
+            </div>
+
+            <div class="section">
+                <h2>Ecuación del polinomio ajustado:</h2>
+                <pre>
+            y = 42.3217 + 7.6867x^1 + -0.3856x^2 + 0.0066x^3
+                    </pre>
+            </div>
+
+
+
+            <section class="expli">
+                <h2>🔍 ¿Qué hace paso a paso?</h2>
+                <h3>1. Importación de datos</h3>
+                <p>Se cargan datos desde un archivo Excel que contiene fechas y la afluencia mensual de usuarios del metro.</p>
+
+                <h3>2. Preprocesamiento</h3>
+                <ul>
+                    <li>Se convierte la columna de fechas a formato <code>datetime</code>.</li>
+                    <li>Se transforma la afluencia de usuarios en millones para simplificar los números.</li>
+                </ul>
+
+                <h3>3. Modelo matemático</h3>
+                <p>
+                    Se construye una matriz de diseño tipo Vandermonde <strong>A</strong>, con potencias de tiempo (meses transcurridos desde el inicio):<br>
+                    <code>A = [1, x, x², x³]</code>
+                </p>
+                <p>
+                    Se resuelve el sistema normal <code>(AᵀA)c = Aᵀy</code> para obtener los coeficientes del polinomio:<br>
+                    <code>c = [c₀, c₁, c₂, c₃]</code>
+                </p>
+
+                <h3>4. Ecuación ajustada</h3>
+                <p>
+                    El resultado es un polinomio de grado 3 que aproxima la evolución de la afluencia a lo largo del tiempo:<br>
+                    <code>y = c₀ + c₁x + c₂x² + c₃x³</code>
+                </p>
+                <p>Este modelo permite interpolar y predecir la afluencia en otros meses dentro del rango.</p>
+
+                <h3>5. Visualización</h3>
+                <p>Se grafica la serie de datos originales (en azul) y la curva ajustada (en rojo), mostrando qué tan bien se adapta el modelo a la realidad observada.</p>
+            </section>
+
+            <section>
+                <h2>🧠 ¿Para qué sirve este modelo?</h2>
+                <ul>
+                    <li>Estimar tendencias de afluencia en el metro a lo largo del tiempo.</li>
+                    <li>Predecir valores futuros si el patrón sigue comportándose similarmente.</li>
+                    <li>Analizar la forma de crecimiento/caída (por eso es útil un polinomio de grado mayor que 1).</li>
+                    <li>Apoya la toma de decisiones en planificación de transporte o servicios públicos.</li>
+                </ul>
+            </section>
+
+            <div class="contenedor">
+                <h1>📈 Modelo Polinomial de Afluencia</h1>
+
+                <h2>🔢 Ecuación Ajustada</h2>
+                <p class="ecuacion">
+                    y(x) = 42.3217 + 7.6867x − 0.3856x² + 0.0066x³
+                </p>
+
+                <h2>📉 Derivada del Modelo</h2>
+                <p class="ecuacion">
+                    y′(x) = 7.6867 − 0.7712x + 0.0198x²
+                </p>
+
+                <h3>📌 Interpretación</h3>
+                <ul>
+                    <li><strong>y′(x)</strong> indica cómo cambia la afluencia mensual respecto al tiempo.</li>
+                    <li>Cuando y′(x) &gt; 0, la afluencia está creciendo.</li>
+                    <li>Cuando y′(x) &lt; 0, la afluencia está disminuyendo.</li>
+                    <li>Cuando y′(x) = 0, hay un punto de cambio en la tendencia (máximo o mínimo local).</li>
+                </ul>
+            </div>
 
 
 
